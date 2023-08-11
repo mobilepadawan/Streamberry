@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,200;1,200&display=swap");
+
+html {
+    color-scheme: Dark;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+nav {
+    margin-top: 20px;
+    display: flex;
+}
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+article {
+    width: 100%;
+    gap: 30px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+dialog:focus {
+    outline: none;
+}
+
+dialog {
+    padding: 20px;
+    user-select: none;
+    position: fixed;
+    top: -10;
+    left: -10;
+    width: 105%;
+    height: 100%;
+    margin: 0;
+    /* padding: 10px; */
+    border: 1px solid transparent;
+    background-color: rgb(0, 0, 0); /* Fondo oscuro con transparencia */
+    /* box-sizing: border-box; */
+    overflow-x: hidden;
+    scrollbar-width: none;
+    line-height: 24px;
+    & h2#titleDetail {
+        width: 80%;
+    }
+    & h2#titleDetail, .close-btn {
+        text-shadow: 1px 1px 2px black;
+        line-height: 48px;
+    }
+    & img {
+        margin: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        filter: brightness(0.8);
+        transition: 0.8s ease-out;
+    }
+    & img:hover {
+        transition: 0.8s ease-in;
+        transform: scale(1.02);
+        filter: brightness(1.2);
+        overflow-x: hidden;
+    }
+    & p {
+        text-align: justify;
+    }
+    & .align-detail {
+        max-width: 780px;
+        margin: 0 auto;
+    }
+    & h2 {
+        font-size: 40px;
+        color: white;
+        position: fixed;
+        top: 0px;
+        left: 30px;
+        font-weight: 700;
+    }
+    & .close-btn {
+        font-size: 30px;
+        top: 4px;
+        right: 30px;
+        text-align: right;
+        cursor: pointer;
+    }
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia para el backdrop */
+}
+
+.dialog-hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.header-title {
+    user-select: none;
+    display: inline;
+    vertical-align: middle;
+}
+
+.search-box {
+    margin-left: 10px;
+    padding: 1px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.search-box-closed {
+    margin-left: 10px;
+    width: 0;
+    overflow: hidden;
+    transition: width 1s ease-out;
+}
+
+.search-box-active {
+    margin-left: 10px;
+    width: 400px;
+    overflow: hidden;
+    transition: width 1s ease-in;
+}
+
+.search-box-icon {
+    font-size: x-large;
+    display: inline;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input[type=search] {
+    padding: 8px;
+    margin-left: 40px;
+    width: 400px;
+    font-size: larger;
+    background-color: black;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-style: 2px;
+    border-color: transparent;
+    outline-style: none;
+    letter-spacing: 0.1px;
+}
+
+input[type=search]:focus {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-style: 2px solid;
+    border-bottom: lightgrey;
+}
+
+div.genres {
+    width: 100%;
+    display: inline;
+    scroll-behavior: smooth;
+    text-align: center;
+}
+
+div.genres, span {
+    user-select: none;
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.container {
+    gap: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    max-width: 780px;
+}
+
+h1.logo {
+    display: inline;
+    color: red;
+    font-size: 40px;
+    letter-spacing: 0.9px;
+}
+
+div.presentation {
+    width: 100%;
+    text-align: center;
+    & img {
+        width: 40px;
+    }
+}
+
+.card-movie {
+    display: flexbox;
+    width: 220px;
+    height: 330px;
+    padding: 2px;
+    margin-bottom: 46px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 6px 6px 6px rgba(211, 211, 211, 0.031);
+    filter: brightness(0.7);
+}
+
+.card-movie-img {
+    transition: transform 0.2s;
+    width: 100%;
+}
+
+.card-movie-title {
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+.card-movie:hover {
+    transition: 0.2s ease-in;
+    transform: scale(1.01);
+    filter: brightness(1.2);
+    cursor: pointer;
+}
