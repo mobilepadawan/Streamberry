@@ -5,12 +5,12 @@ A personal sort of Streaming WebApp using The Movie DB API.
 
 After **12 years as a customer of the Netflix streaming service**, I decided to take the risk and start my own streaming service. And there is the result of that: [Streamberryflix](https://mobilepadawan.github.io/Streamberry/).
 
-I digged into [The MovieDB API](https://themoviedb.org/) and I found a !easy API to get movies and series content and with the half of way roaded I start to code my own project: the Result: Streamberryflix.
+I digged into [The MovieDB API](https://themoviedb.org/) and I found a !easy API to get movies and series content and with the half of way roaded I start to code my own project. The Result was named: **Streamberryflix** (😱 *as seen on streaming!*).
 
-## CSS is a pain
-I always suffered CSS or I should say *"I always suffered the graphic design"*. Curiosly I became good in programming logic but the design way is not my favourite. Instead of that, I'd tried to do my best and you can appreciate the results of it: Streamberryflix.
+## CSS is a pain in the 🍑
+I always suffered CSS or maybe I should say *"I always suffered the graphic design"*. Curiosly I became good in programming logic but the design stuff is not my s#it. Instead of that, I'd tried to do my best and you can appreciate the results of it: Streamberryflix.
 
-This !streaming-service was inspired in the Netflix platform and, of course, in the sixth season of Black Mirror.
+This !streaming-service was inspired in the Netflix platform❤️ and, of course, in the season six of Black Mirror🖤.
 
 ## Talk to seriously
 
