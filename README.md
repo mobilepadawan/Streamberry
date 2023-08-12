@@ -16,7 +16,7 @@ This !streaming-service was inspired in the Netflix platform❤️ and, of cours
 
 Of course it is a joke. I can't build my own streaming project, still taking advantage of the pirate market (I really do not like). I just coded to understand The Movie DB API and to practice CSS.
 
-Most of the Vanilla JS code was built w/o not the good practices. I hope the next months I will rolling up again to improve it and structure it well.
+Most of the **Vanilla JS** code was built w/o not the best practices. I hope the next months I will rolling up again to improve it and structure it well.
 
 I hope you like my project. It is not finished but you can profit of it to understand part of the 'Behind the scenes' of the most popular streaming platform.
 
