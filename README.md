@@ -28,7 +28,7 @@ I built a carrousel header using the `Math.random()` JavaScript method to iterat
 
 ## Movies catalog
 I `fetch()` the Popular movie catalog of The MovieDB API. This API send you 20 movies per page.
-You should use the base URI and a previous registration to get the token for querying the MovieDB API. Into the URL you are fetching, you can send some parameters like `language`, `page` and, of course, the ÀPI_KEY`.
+You should use the base URI and a previous registration to get the token for querying the MovieDB API. Into the URL you are fetching, you can send some parameters like `language`, `page` and, of course, the `API_KEY`.
 
 ```javascript
 const APIURL = `${URI}?api_key=${apiKey}&language=${language}&page=${page}`
@@ -39,3 +39,10 @@ fetch(APIURL)
     catalog.push(...data.results)
 })
 ```
+The platform send you a `data.results`and you can save it in a local Array of objects. After you can iterate and build the movie cards.
+
+To get the detail you can save some data of the main array and to list the characters of a movie, you should query another API URI.
+
+In addition to this, you can take advantage of many other APIs to rich the content to show. I didn't digg deeply this API. But with one or two API URI's you can build an intereseting project similar to this: [Streamberryflix](https://mobilepadawan.github.io/Streamberry/).
+
+Another credits to highlight is the movie icon, rescued of [FlatIcon](https://www.flaticon.com/) 
