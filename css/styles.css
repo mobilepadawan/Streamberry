@@ -5,6 +5,10 @@ html {
     font-family: 'Nunito', sans-serif;
 }
 
+.ocultar {
+    display: none;
+}
+
 .header {
     position: fixed;
     z-index: 9999;
@@ -12,9 +16,41 @@ html {
     width: 100%;
     height: 80px;
     display: flex;
-    margin-left: 20px;
+    margin-left: 0;
     align-items: center;
     font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(180deg, rgba(2,0,36,0.9) 30%, rgba(0,0,0,0.0) 100%);
+}
+
+.promoting {
+    display: inline-block;
+    top: 0;
+    width: 100%;
+    position: absolute;
+    & img {
+        width: 100%;
+        clip-path: view-box;
+        transition: 0.8s ease-out;
+        filter: brightness(0.7);
+        transition: 0.5s ease-in-out;
+    }
+    & h3 {
+        color: white;
+        font-size: 3rem;
+        position: inherit;
+        top: 40%;
+        left: 30px;
+        text-shadow: 2px 2px 2px black;
+    }
+    & p {
+        width: 70%;
+        font-size: larger;
+        color: white;
+        position: inherit;
+        top: 55%;
+        left: 30px;
+        text-shadow: 2px 2px 2px black;
+    }
 }
 
 nav {
@@ -25,91 +61,6 @@ nav {
 main {
     display: flex;
     align-items: center;
-}
-
-article {
-    width: 100%;
-    gap: 30px;
-    margin-top: 40px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-dialog:focus {
-    outline: none;
-}
-
-dialog {
-    padding: 20px;
-    user-select: none;
-    position: fixed;
-    top: -10;
-    left: -10;
-    width: 105%;
-    height: 100%;
-    margin: 0;
-    /* padding: 10px; */
-    border: 1px solid transparent;
-    background-color: rgb(0, 0, 0); /* Fondo oscuro con transparencia */
-    /* box-sizing: border-box; */
-    overflow-x: hidden;
-    scrollbar-width: none;
-    line-height: 24px;
-    & h2#titleDetail {
-        width: 80%;
-    }
-    & h2#titleDetail, .close-btn {
-        text-shadow: 1px 1px 2px black;
-        line-height: 48px;
-    }
-    & img {
-        margin: 0;
-        top: 0;
-        left: 0;
-        width: 100%;
-        filter: brightness(0.8);
-        transition: 0.8s ease-out;
-    }
-    & img:hover {
-        transition: 0.8s ease-in;
-        transform: scale(1.02);
-        filter: brightness(1.2);
-        overflow-x: hidden;
-    }
-    & p {
-        text-align: justify;
-    }
-    & .align-detail {
-        max-width: 780px;
-        margin: 0 auto;
-    }
-    & h2 {
-        font-size: 40px;
-        color: white;
-        position: fixed;
-        top: 0px;
-        left: 30px;
-        font-weight: 700;
-    }
-    & .close-btn {
-        font-size: 30px;
-        top: 4px;
-        right: 30px;
-        text-align: right;
-        cursor: pointer;
-    }
-}
-
-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia para el backdrop */
-}
-
-.dialog-hidden {
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
 }
 
 .header-title {
@@ -169,42 +120,28 @@ input[type=search]:focus {
     border-bottom: lightgrey;
 }
 
-div.genres {
-    width: 100%;
-    display: inline;
-    scroll-behavior: smooth;
-    text-align: center;
-}
-
-div.genres, span {
-    user-select: none;
-    text-transform: uppercase;
-    font-family: 'Nunito', sans-serif;
-    padding: 16px;
-    cursor: pointer;
-}
-
 .container {
-    gap: 40px;
+    width: 100%;
+    gap: 19px;
     display: flex;
     flex-direction: row;
     align-items: center;
     align-content: center;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 46%;
     margin-bottom: 30px;
-    max-width: 780px;
 }
 
 h1.logo {
     display: inline;
     color: red;
     font-size: 40px;
+    margin-left: 16px;
     letter-spacing: 1.7px;
-    text-shadow: 1px 1px 2px black;
 }
 
-div.presentation {
+.presentation {
     width: 100%;
     text-align: center;
     & img {
@@ -215,7 +152,7 @@ div.presentation {
 .card-movie {
     display: flexbox;
     width: 220px;
-    height: 330px;
+    height: 370px;
     padding: 2px;
     margin-bottom: 46px;
     text-align: center;
@@ -239,4 +176,78 @@ div.presentation {
     transform: scale(1.01);
     filter: brightness(1.2);
     cursor: pointer;
+}
+
+dialog:focus {
+    outline: none;
+}
+
+dialog {
+    padding: 20px;
+    user-select: none;
+    position: fixed;
+    top: -10;
+    left: -10;
+    width: 105%;
+    height: 100%;
+    margin: 0;
+    border: 1px solid transparent;
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    scrollbar-width: none;
+    line-height: 24px;
+    & h2#titleDetail {
+        width: 80%;
+    }
+    & h2#titleDetail, .close-btn {
+        text-shadow: 1px 1px 2px black;
+        line-height: 120px;
+    }
+    & img {
+        margin: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        filter: brightness(0.8);
+        transition: 0.8s ease-out;
+    }
+    & img:hover {
+        transition: 0.8s ease-in;
+        transform: scale(1.02);
+        filter: brightness(1.2);
+        overflow-x: hidden;
+    }
+    & p {
+        text-align: justify;
+        line-height: 30px;
+        font-size: 1.3rem;
+    }
+    & .align-detail {
+        max-width: 780px;
+        margin: 0 auto;
+    }
+    & h2 {
+        font-size: 60px;
+        color: white;
+        position: fixed;
+        top: 0px;
+        left: 30px;
+        font-weight: 700;
+    }
+    & .close-btn {
+        font-size: 60px;
+        top: 4px;
+        right: 30px;
+        text-align: right;
+        cursor: pointer;
+    }
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia para el backdrop */
+}
+
+.dialog-hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
 }

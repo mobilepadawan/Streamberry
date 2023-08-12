@@ -1,11 +1,13 @@
-import { apiKey, language, URI, URISeriesCat, URIMoviesCat } from '../js/tmdbapi.js'
+import { apiKey, language, URI, URISeriesCat, URIMoviesCat } from '../JS/tmdbapi.js'
 const catalog = []
 const categories = []
+const promotingContent = []
 const container = document.querySelector('.container')
 const containerCat = document.querySelector('.genres')
 const pages = document.querySelectorAll('div.genres span')
 const searchButton = document.querySelector('#searchButton')
 const inputSearch = document.querySelector('input[type=search]')
+let index = 0
 
 searchButton.addEventListener('click', ()=> {
     document.querySelector('div.search-box').classList.add('search-box-active')
@@ -32,6 +34,36 @@ const loadCategories = ()=> {
     }
 }
 
+const buildContentPromoted = ()=> {
+    for (let i = 0; i < 6; i++) {
+        const randomNumber = Math.floor(Math.random() * 20)
+        console.log(randomNumber)
+        console.log(`https://image.tmdb.org/t/p/w1280${catalog[randomNumber].backdrop_path}`)
+        const ContentToAdd = {
+            backdrop: `https://image.tmdb.org/t/p/w1280${catalog[randomNumber].backdrop_path}`,
+            title: catalog[randomNumber].title,
+            overview: catalog[randomNumber].overview
+        }
+        promotingContent.push(ContentToAdd)
+    }
+    console.table(promotingContent)
+}
+
+setInterval(() => {
+    showContentPromoted()
+}, 20000);
+
+const showContentPromoted = ()=> {
+    if (index === 5) {
+        index = 0
+    } else {
+        ++index
+    }
+    document.querySelector('div.promoting img').src = promotingContent[index].backdrop
+    document.querySelector('div.promoting h3').textContent = promotingContent[index].title
+    document.querySelector('div.promoting p').textContent = promotingContent[index].overview
+}
+
 const getMovies = async (page)=> {
     const APIURL = `${URI}?api_key=${apiKey}&language=${language}&page=${page}`
     fetch(APIURL)
@@ -42,6 +74,8 @@ const getMovies = async (page)=> {
     })
     .then(()=> loadMovies(catalog))
     .then(()=> setClickInCovers())
+    .then(()=> buildContentPromoted())
+    .then(()=> showContentPromoted())
 }
 getMovies(1)
 
@@ -97,7 +131,7 @@ const showMovieDetails = async (movieId)=> {
     // getVideos(movieId)
     const movieSelected = catalog.find((catalog)=> catalog.id === parseInt(movieId))
     if (movieSelected) {
-        document.querySelector('img#movieBackdrop').src = `https://image.tmdb.org/t/p/w780${movieSelected.backdrop_path}`
+        document.querySelector('img#movieBackdrop').src = `https://image.tmdb.org/t/p/w1280${movieSelected.backdrop_path}`
         document.querySelector('h2#titleDetail').textContent = movieSelected.title
         document.querySelector('h2.close-btn').addEventListener('click', ()=> {
             movieDialog.close()
