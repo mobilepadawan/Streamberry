@@ -27,7 +27,8 @@ Take a tour about the minimal functions of this project I built in.
 I built a carrousel header using the `Math.random()` JavaScript method to iterate over the Catalog Object Array to select randomly 5 popular movies. I took the backdrop path image, title and overview to build a sort of carrousel using `setInterval()` function over another array.
 
 ## Movies catalog
-I `fetch()` over the Popular movie catalog of The MovieDB API. This API sent you 20 movies by page.
+I `fetch()` the Popular movie catalog of The MovieDB API. This API send you 20 movies per page.
+You should use the base URI and a previous registration to get the token for querying the MovieDB API. Into the URL you are fetching, you can send some parameters like `language`, `page` and, of course, the ÀPI_KEY`.
 
 ```javascript
 const APIURL = `${URI}?api_key=${apiKey}&language=${language}&page=${page}`
