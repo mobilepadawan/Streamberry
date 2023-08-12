@@ -1,4 +1,4 @@
-import { apiKey, language, URI, URISeriesCat, URIMoviesCat } from './js/tmdbapi.js'
+import { apiKey, language, URI, URISeriesCat, URIMoviesCat } from '../js/tmdbapi.js'
 const catalog = []
 const categories = []
 const promotingContent = []
