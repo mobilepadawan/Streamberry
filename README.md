@@ -30,8 +30,6 @@ I built a carrousel header using the `Math.random()` JavaScript method to iterat
 const buildContentPromoted = ()=> {
     for (let i = 0; i < 6; i++) {
         const randomNumber = Math.floor(Math.random() * 20)
-        console.log(randomNumber)
-        console.log(`https://image.tmdb.org/t/p/w1280${catalog[randomNumber].backdrop_path}`)
         const ContentToAdd = {
             backdrop: `https://image.tmdb.org/t/p/w1280${catalog[randomNumber].backdrop_path}`,
             title: catalog[randomNumber].title,
@@ -43,7 +41,7 @@ const buildContentPromoted = ()=> {
 }
 ```
 
-I took the `backdrop_path` image, title and overview to build a sort of carrousel using `setInterval()` function over another array.
+I took the `backdrop_path` image, title and overview to build a sort of carrousel using `setInterval()` function over another array. Some ternary operator to reduce a little bit the coding logic.
 
 ```javascript
 const showContentPromoted = ()=> {
