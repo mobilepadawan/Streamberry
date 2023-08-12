@@ -1,5 +1,5 @@
 # Streamberry
-A personal Streaming like WebApp using The Movie DB API.
+A personal sort of Streaming WebApp using The Movie DB API.
 
 # Intro
 
