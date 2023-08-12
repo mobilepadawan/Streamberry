@@ -8,7 +8,7 @@ After **12 years as a customer of the Netflix streaming service**, I decided to 
 I digged into [The MovieDB API](https://themoviedb.org/) and I found a !easy API to get movies and series content and with the half of way roaded I start to code my own project: the Result: Streamberryflix.
 
 ## CSS is a pain
-I always suffered CSS or I should say "I always suffered the graphic design". Curiosily I became good in programming logic but the design way is not my favourite. Instead of that, I'd tried to do my best and you can appreciate the results of it: Streamberryflix.
+I always suffered CSS or I should say *"I always suffered the graphic design"*. Curiosly I became good in programming logic but the design way is not my favourite. Instead of that, I'd tried to do my best and you can appreciate the results of it: Streamberryflix.
 
 This !streaming-service was inspired in the Netflix platform and, of course, in the sixth season of Black Mirror.
 
