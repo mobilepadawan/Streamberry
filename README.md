@@ -3,4 +3,4 @@ A personal Streaming like WebApp using The Movie DB API.
 
 # Intro
 
-After 12 years of subscription to Netflix stream service, I decided to take the risk and start my own streaming service. And there is the result of that: [https://mobilepadawan.github.io/Streamberry/](STREAMBERRYFLIX).
+After 12 years of subscription to Netflix stream service, I decided to take the risk and start my own streaming service. And there is the result of that: [Streamberryflix]([STREAMBERRYFLIX](https://mobilepadawan.github.io/Streamberry/)https://mobilepadawan.github.io/Streamberry/).
