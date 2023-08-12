@@ -24,7 +24,41 @@ I hope you like my project. It is not finished but you can profit of it to under
 Take a tour about the minimal functions of this project I built in.
 
 ## Main Carrousel
-I built a carrousel header using the `Math.random()` JavaScript method to iterate over the Catalog Object Array to select randomly 5 popular movies. I took the backdrop path image, title and overview to build a sort of carrousel using `setInterval()` function over another array.
+I built a carrousel header using the `Math.random()` JavaScript method to iterate over the Catalog Object Array to select randomly 5 popular movies.
+
+```javascript
+const buildContentPromoted = ()=> {
+    for (let i = 0; i < 6; i++) {
+        const randomNumber = Math.floor(Math.random() * 20)
+        console.log(randomNumber)
+        console.log(`https://image.tmdb.org/t/p/w1280${catalog[randomNumber].backdrop_path}`)
+        const ContentToAdd = {
+            backdrop: `https://image.tmdb.org/t/p/w1280${catalog[randomNumber].backdrop_path}`,
+            title: catalog[randomNumber].title,
+            overview: catalog[randomNumber].overview
+        }
+        promotingContent.push(ContentToAdd)
+    }
+    console.table(promotingContent)
+}
+```
+
+I took the `backdrop_path` image, title and overview to build a sort of carrousel using `setInterval()` function over another array.
+
+```javascript
+const showContentPromoted = ()=> {
+    index === 5 ? index = 0 : ++index
+    document.querySelector('div.promoting img').src = promotingContent[index].backdrop
+    document.querySelector('div.promoting h3').textContent = promotingContent[index].title
+    document.querySelector('div.promoting p').textContent = promotingContent[index].overview
+}
+
+setInterval(() => {
+    showContentPromoted()
+}, 20000)
+```
+
+Every 20 seconds I rotate the main content promotioning most popular movies.
 
 ## Movies catalog
 I `fetch()` the Popular movie catalog of The MovieDB API. This API send you 20 movies per page.
@@ -41,8 +75,8 @@ fetch(APIURL)
 ```
 The platform send you a `data.results`and you can save it in a local Array of objects. After you can iterate and build the movie cards.
 
-To get the detail you can save some data of the main array and to list the characters of a movie, you should query another API URI.
+To get the movie's detail you can save the data **fetched** of the main array and to list the characters of a movie, you should query another API URI.
 
 In addition to this, you can take advantage of many other APIs to rich the content to show. I didn't digg deeply this API. But with one or two API URI's you can build an intereseting project similar to this: [Streamberryflix](https://mobilepadawan.github.io/Streamberry/).
 
-Another credits to highlight is the movie icon, rescued of [FlatIcon](https://www.flaticon.com/) 
+Another credits to highlight is the movie icon, rescued of [FlatIcon](https://www.flaticon.com/).
