@@ -81,3 +81,9 @@ Another credits to highlight is the movie icon, rescued of [FlatIcon](https://ww
 
 ## Web Browser Compatibility
 I tested the project in **Chrome** and **Edge**. Of course in **Safari** but I don't have the last version of it with all the improvements in CSS and JS, and because of that the UI resultant is awful (yes, as Jane does! 😂).
+
+I think I'll update my MacOS system in the coming months and I'll improve the CSS code for Safari compatibility.
+
+I want to make another sprint of code over the Mobile First improvements to support effectively toe mobile and tablet ecosystems.
+
+Thanks for reading me. Best regards and take a copy of this code to profit it!
