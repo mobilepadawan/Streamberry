@@ -16,7 +16,7 @@ This !streaming-service was inspired in the Netflix platform❤️ and, of cours
 
 Of course it is a joke. I can't build my own streaming project, still taking advantage of the pirate market (I really do not like). I just coded to understand The Movie DB API and to practice CSS.
 
-Most of the **Vanilla JS** code was built w/o not the best practices. I hope the next months I will rolling up again to improve it and structure it well.
+Most of the **Vanilla JS** code was built w/o not the best practices. I hope in the coming months I will rolling up again to improve it and structure it well.
 
 I hope you like my project. It is not finished but you can profit of it to understand part of the 'Behind the scenes' of the most popular streaming platform.
 
@@ -78,3 +78,6 @@ To get the movie's detail you can save the data **fetched** of the main array an
 In addition to this, you can take advantage of many other APIs to rich the content to show. I didn't digg deeply this API. But with one or two API URI's you can build an intereseting project similar to this: [Streamberryflix](https://mobilepadawan.github.io/Streamberry/).
 
 Another credits to highlight is the movie icon, rescued of [FlatIcon](https://www.flaticon.com/).
+
+## Web Browser Compatibility
+I tested the project in **Chrome** and **Edge**. Of course in **Safari** but I don't have the last version of it with all the improvements in CSS and JS, and because of that the UI resultant is awful (yes, as Jane does! 😂).
