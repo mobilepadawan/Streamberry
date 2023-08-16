@@ -2,71 +2,49 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>STREAMBERRYFLIX</title>
+    <title>Streamberryflix</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/clapperboard.png" type="image/png">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+    <link rel="shortcut icon" href="./images/clapperboard.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./css/styles.css">
-    <script defer type="module" src="./js/main.js"></script>
+    <link rel="preconnect" href="https://api.themoviedb.org/3/" crossorigin>
+    <link rel="preconnect" href="https://image.tmdb.org/t/p/" crossorigin>
+    <link rel="stylesheet" href="css/sbf.css">
+    <meta name="theme-color" content="#000000">
+    <script type="module" defer src="js/main.js"></script>
 </head>
 <body>
     <header>
         <div class="header">
             <div class="header-title">
-                <h1 class="logo">STREAMBERRYFLIX</h1>
+                <h1>STREAMBERRYFLIX</h1>
+            </div>
+            <div class="header-search-icon">
+                <span id="searchButton" title="Ver caja de búsqueda">🔍</span>
             </div>
             <div class="search-box search-box-closed">
                 <input type="search" id="inputSearch" placeholder="Título a buscar">
             </div>
-            <div class="search-box-icon">
-                <span id="searchButton" title="Ver caja de búsqueda">🔍</span>
-            </div>
         </div>
     </header>
-    <!-- <nav>
-        <div class="genres">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>5</span>
-            <span>6</span>
-            <span>7</span>
-            <span>8</span>
-            <span>9</span>
-            <span>10</span>
-        </div>
-    </nav> -->
     <main>
         <section>
-            <div class="promoting">
-                <img src="https://image.tmdb.org/t/p/w1280/tTfnd2VrlaZJSBD9HUbtSF3CqPJ.jpg">
-                <h3>Título de la película</h3>
+            <div class="content-promoted">
+                <img src="https://image.tmdb.org/t/p/w1280/tTfnd2VrlaZJSBD9HUbtSF3CqPJ.jpg" alt="">
+                <h2>Título de la película</h2> <!-- Mayor a 32 caracteres, ocultar el paragraph siguiente -->
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni cumque sed aliquam laborum minima maiores. Incidunt perferendis quidem commodi tempore iusto, sequi est, nisi officia magnam, beatae ratione quaerat alias?</p>
             </div>
         </section>
         <article>
             <div class="container">
-                <div class="presentation">
+                <div class="loader-animation">
                     <img src="images/Rolling-1.9s-200px.gif" alt="Loading content">
-                </div>    
+                </div>
             </div>
         </article>
     </main>
-    <dialog>
-        <img id="movieBackdrop" src="">
-        <h2 id="titleDetail"></h2>
-        <h2 class="close-btn" title="Cerrar"><strong>X</strong></h2>
-        <div class="align-detail">
-            <p>SINOPSIS:</p>
-            <p id="sinopsisDetail"></p>
-            <hr>
-        <p><strong>RATE:</strong><span id="rateNumber"></span><span id="showStars"></span></p>
-        <p><strong>REPARTO:</strong></p>
-        <p id="reparto"></p>
-        </div>
-    </dialog>
+    <footer>
+
+    </footer>
 </body>
 </html>
