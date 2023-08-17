@@ -13,10 +13,10 @@
             "sizes": "192x192"
         }
     ],
-    "start_url": "/",
+    "start_url": "./",
     "background_color": "#000000",
     "display": "standalone",
-    "scope": "/",
+    "scope": "./",
     "theme_color": "#000000",
     "description": "Worldwide movies catalog"
 }
